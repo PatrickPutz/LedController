@@ -1,0 +1,21 @@
+Einteilung:
+PO: Yana Gummerer --> Doku 
+SM: Christian Gert --> Planung, Daily Meetings, Retrospektive
+Dev: Patrick Putz, Leo Tanner
+Test: Leo Tanner
+
+Epic 2
+2.1 Setzen einer LED
+2.2 Ausschalten aller LEDs
+2.3 Lauflicht
+2.4 Demo Programm
+2.5 Demo Programm
+
+
+Tasks (Story-Points):
+
+2.1 Setzen einer LED
+- ApiService erweitern um Farbe und Zustand einer LED zu setzen(5) --> DEV Team
+
+2.2 Ausschalten aller LEDs
+- Led Controller erweitern um eine turnOffAll Leds Methode (8)
