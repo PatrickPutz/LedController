@@ -1,8 +1,0 @@
-Agenda:
-1. Woran arbeiten wir gerade?
-Teilweise Tasks von 2.2 erledigt. Fehler aufgetreten, welche analysiert werden müssen
-2. Woran arbeiten wir die nächste Stunde?
-Weitere Fehlerbehebungen
-3. Was sind die aktuellen Probleme?
-Troubleshooting Tasks 2.2
-

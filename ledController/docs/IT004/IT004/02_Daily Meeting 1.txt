@@ -1,7 +1,0 @@
-Agenda:
-1. Woran arbeiten wir gerade?
-Tasks von 2.1 implementiert	
-2. Woran arbeiten wir als nächstes?
-Tasks von 2.2 begonnen
-3. Was sind die aktuellen Probleme?
-keine
