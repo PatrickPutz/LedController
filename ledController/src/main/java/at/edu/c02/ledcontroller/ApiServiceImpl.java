@@ -25,18 +25,17 @@ public class ApiServiceImpl implements ApiService {
     @Override
     public JSONObject getLights() throws IOException
     {
-        // Connect to the server
-        URL url = new URL("https://balanced-civet-91.hasura.app/api/rest/getLights");
-        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-        // and send a GET request
-        connection.setRequestMethod("GET");
-        connection.setRequestProperty("X-Hasura-Group-ID", "996fb92427ae41e4649b934");
-        // Read the response code
-        int responseCode = connection.getResponseCode();
-        if(responseCode != HttpURLConnection.HTTP_OK) {
-            // Something went wrong with the request
-            throw new IOException("Error: getLights request failed with response code " + responseCode);
-        }
+        return createGetRequest(new URL("https://balanced-civet-91.hasura.app/api/rest/getLights"));
+    }
+
+    @Override
+    public JSONObject getLight(int id) throws IOException {
+        return createGetRequest(new URL("https://balanced-civet-91.hasura.app/api/rest/lights/" + id));
+    }
+
+    public JSONObject createGetRequest(URL url) throws IOException {
+
+        HttpURLConnection connection = establishConnection(url);
 
         // The request was successful, read the response
         BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
@@ -53,4 +52,18 @@ public class ApiServiceImpl implements ApiService {
         // Convert response into a json object
         return new JSONObject(jsonText);
     }
+
+    private HttpURLConnection establishConnection(URL url) throws IOException {
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        connection.setRequestMethod("GET");
+
+        connection.setRequestProperty("X-Hasura-Group-ID", "996fb92427ae41e4649b934");
+
+        int responseCode = connection.getResponseCode();
+        if(responseCode != HttpURLConnection.HTTP_OK) {
+            throw new IOException("Error: connection failed with no response code " + responseCode);
+        }
+        return connection;
+    }
+
 }
