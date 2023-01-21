@@ -76,6 +76,20 @@ public class LedControllerImpl implements LedController {
                 System.out.println(groupLed.toString());
             }
         }
+        else if(input.equalsIgnoreCase("groupstatus")){
+            JSONArray groupLeds = this.getGroupLeds();
+            for(int i = 0; i < groupLeds.length(); i++){
+                JSONObject currentLed = groupLeds.getJSONObject(i);
+                String status;
+
+                if(currentLed.getBoolean("on"))
+                    status = "on";
+                else
+                    status = "off";
+
+                System.out.println("LED " + currentLed.getInt("id") + " is currently " + status + ". Color: " + currentLed.getString("color"));
+            }
+        }
         else if(!input.equalsIgnoreCase("exit")){
             this.demoId(Integer.parseInt(input));
         }
