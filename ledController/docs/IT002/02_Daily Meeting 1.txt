@@ -1,0 +1,8 @@
+Agenda:
+1. Woran arbeiten wir gerade?
+Fehler in der Implementierung bei Punkt 1.2 gefunden
+2. Woran arbeiten wir die nächste Stunde?
+Bugs bei 1.2 versuchen zu beheben und weiter an 1.1 arbeiten
+3. Was sind die aktuellen Probleme?
+Implementierung erweist sich schwieriger als erwartet.
+

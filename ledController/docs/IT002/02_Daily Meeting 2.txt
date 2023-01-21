@@ -1,0 +1,8 @@
+Agenda:
+1. Woran arbeiten wir gerade?
+Implementierung bei Punkt 1.2, da irrtümlich beim "Pullen" der Softwarestand überschrieben wurde.
+2. Woran arbeiten wir die nächste Stunde?
+Implementierung von Punkt 1.2
+3. Was sind die aktuellen Probleme?
+Softwarestand wurde irrtümlich überschrieben
+

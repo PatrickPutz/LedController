@@ -1,0 +1,24 @@
+Einteilung:
+PO: Yana Gummerer -> Doku
+SM: Christian Gert -> Planung, Daily Meetings, Retrospektive
+Dev: Patrick Putz, Leo Tanner
+Test: Leo Tanner
+
+Epic 1
+1. Einzel-Status-Abfrage
+2. Gruppen-Status-Abfrage
+3. Status-Abfrage
+    
+
+Tasks (Story-Points):
+
+1.2 Gruppen-Status-Abfrage
+
+ 	   
+- Test hinzufügen, der den ApiService mocked und prüft(11)	-> Test Team
+
+
+1.3 Status Abfrage
+- Main erweitern groupstatus(3) 					-> Dev Team
+- Main erweitern status(5) 						-> Dev Team
+

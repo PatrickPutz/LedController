@@ -1,0 +1,10 @@
+1. Was ist gut gelaufen
+2. Was könnte besser laufen
+3. Was müssen wir behalten
+
+Tests wurden bei 1.2 abgebrochen, da diese für uns sehr komplex und zeitintensiv waren
+Aus Zeitgründen auf Tasks 1.3 umgestiegen
+Tasks von 1.3 wurden schnell erledigt.
+
+
+

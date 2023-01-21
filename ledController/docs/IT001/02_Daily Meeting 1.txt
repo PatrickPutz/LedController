@@ -1,0 +1,9 @@
+Agenga:
+1. Woran arbeiten wir gerade?
+2. Woran arbeiten wir die nächste Stunde?
+3. Was sind die aktuellen Probleme?
+
+Sprintplaning begonnen und einzelne Tasks aufgeteilt.
+Kennenlernen des Programms
+Beginn mit den Tasks von Punkt 1.1 
+

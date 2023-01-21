@@ -1,0 +1,8 @@
+Agenda:
+1. Woran arbeiten wir gerade?
+Tests von 1.2 wurden begonnen, funktionieren jedoch noch nicht.
+2. Woran arbeiten wir als nächstes?
+Beginn mit Tasks von 1.3
+3. Was sind die aktuellen Probleme?
+Test von 1.2 sehr komplex benötigen sehr viel Zeit zu implementieren, deshalb setzen wir mit dem Punkt 1.3 fort.
+

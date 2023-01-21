@@ -1,0 +1,10 @@
+1. Was ist gut gelaufen
+2. Was könnte besser laufen
+3. Was müssen wir behalten
+
+1.2 wurde unabsichtlich überschrieben. 
+Jetzt wurde auf Pair Programming umgestiegen.
+Tasks von 1.1 erfolgreich abgeschlossen.
+
+
+
