@@ -61,7 +61,24 @@ public class LedControllerImpl implements LedController {
                 groupLeds.put(lights.getJSONObject(i));
             }
         }
+
         return groupLeds;
+    }
+
+    public void act(String input) throws IOException {
+        if(input.equalsIgnoreCase("demo"))
+        {
+            this.demo();
+        }
+        else if(input.equalsIgnoreCase("groupleds")){
+            JSONArray groupLeds = this.getGroupLeds();
+            for (Object groupLed : groupLeds) {
+                System.out.println(groupLed.toString());
+            }
+        }
+        else if(!input.equalsIgnoreCase("exit")){
+            this.demoId(Integer.parseInt(input));
+        }
     }
 
 }
