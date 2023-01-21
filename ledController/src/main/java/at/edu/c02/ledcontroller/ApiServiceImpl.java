@@ -5,7 +5,9 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
@@ -31,6 +33,20 @@ public class ApiServiceImpl implements ApiService {
     @Override
     public JSONObject getLight(int id) throws IOException {
         return createGetRequest(new URL("https://balanced-civet-91.hasura.app/api/rest/lights/" + id));
+    }
+
+    @Override
+    public JSONObject setLight(int id, String color, boolean on) {
+        JSONObject light = new JSONObject();
+        light.put("id", id);
+        light.put("color", color);
+        light.put("state", on);
+        try {
+            return makeApiPUTRequest(new URL("https://balanced-civet-91.hasura.app/api/rest/setLight"), light.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public JSONObject createGetRequest(URL url) throws IOException {
@@ -64,6 +80,32 @@ public class ApiServiceImpl implements ApiService {
             throw new IOException("Error: connection failed with no response code " + responseCode);
         }
         return connection;
+    }
+
+    private JSONObject makeApiPUTRequest(URL url, String body) throws IOException {
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        connection.setRequestMethod("PUT");
+        connection.setRequestProperty("X-Hasura-Group-ID", "996fb92427ae41e4649b934");
+        connection.setRequestProperty("Content-Type", "application/json");
+        connection.setRequestProperty("Accept", "application/json");
+        connection.setDoOutput(true);
+
+        try(OutputStream os = connection.getOutputStream()) {
+            byte[] input = body.getBytes("utf-8");
+            os.write(input, 0, input.length);
+        }
+
+        try(BufferedReader br = new BufferedReader(
+                new InputStreamReader(connection.getInputStream(), "utf-8"))) {
+            StringBuilder response = new StringBuilder();
+            String responseLine = null;
+            while ((responseLine = br.readLine()) != null) {
+                response.append(responseLine.trim());
+            }
+
+            String jsonText = response.toString();
+            return new JSONObject(jsonText);
+        }
     }
 
 }
